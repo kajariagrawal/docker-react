@@ -8,4 +8,4 @@ before_install:
 
 script:
     #- docker run -e CI=true -p 8080:80 kajari/docker-react npm run test
-    - docker run -p 8080:80 kajari/docker-react 
+    - docker run -it -p 8080:80 kajari/docker-react 
