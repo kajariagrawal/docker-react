@@ -1,0 +1,16 @@
+FROM node:alpine
+
+WORKDIR '/app'
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install --no-progress
+RUN mkdir -p /app && cp -a /tmp/node_modules /app/
+
+
+
+
+
+#RUN npm install --verbose
+
+COPY . /app
+
+CMD ["npm","run","start"]
