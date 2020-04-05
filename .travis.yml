@@ -6,7 +6,7 @@ services:
 before_install:
     - gem install bundler
     - docker build -t kajari/docker-react -f Dockerfile.dev .
-    - docker run -it -p 3000:3000 kajari/docker-react 
+    #- docker run -it -p 3000:3000 kajari/docker-react 
 
 #script:
     #- docker run -e CI=true -p 8080:80 kajari/docker-react npm run test
